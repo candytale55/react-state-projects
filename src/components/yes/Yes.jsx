@@ -8,12 +8,12 @@ import './assets/styles.css'
      */
 
 export default function Yes() {
-    const result = React.useState("?")
-    console.log(result)
+    const [isImportant, func] = React.useState("Yeap")
+    console.log(isImportant)
     return (
         <main>
             <h1 className="title">Is state important to know?</h1>
-            <button className="value">{result[0]}</button>
+            <button className="value">{isImportant}</button>
         </main>
     )
 }
