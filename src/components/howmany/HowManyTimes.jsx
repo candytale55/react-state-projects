@@ -4,15 +4,44 @@ import { useState } from 'react'
 /**
  * Challenge: 
  * Add functionality to the minus button
+ * 
+ * Don't use ever count++ or ++count because these modify the value directly - Big NO NO in React
  */
-// Don't use ever count++ or ++count because these modify the value directly - Big NO NO in React
+
+
 
 export default function HowManyTimes() {
 
-  function add() {
+  function add_1() {
     console.log("add")
     setCount( count + 1 )  
   }
+
+  /**
+   * There is another way to use the setter function using a callback function.
+   * The callback function would take the old value of count, and you can use 
+   * the temporary version oldValue 
+  */
+
+  function add() {
+    setCount(function (oldValue) {
+      console.log("add")
+      return oldValue + 1;
+    })
+  }
+
+
+  /**
+   * Note: if you ever need the old value of state
+   * to help you determine the new value of state,
+   * you should pass a callback function to your
+   * state setter function instead of using
+   * state directly. This callback function will
+   * receive the old value of state as its parameter,
+   * which you can then use to determine your new
+   * value of state.
+   */
+
 
   function subtract() {
     console.log("subtract")
