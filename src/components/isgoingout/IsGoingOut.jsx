@@ -1,22 +1,23 @@
 
 import './assets/styles.css'
 
-
+/**
+ * Challenge: move our ternary directly inside of the JSX
+ * so the "Yes" and "No" are determined inside the <h1>
+ * 
+ * Hint: you will no longer need the `answer` variable
+ */
 
 export default function IsGoingOut() {
-    /**
-     * Challenge: Replace the if/else below with a ternary
-     * to determine the text that should display on the page
-     */
-    const isGoingOut = false
 
-    let answer = isGoingOut ? "Yes" : "No"  // 👈 Use ternary here
+    const isGoingOut = true
 
+   
 
     return (
         <main>
             <h1 className="title">Do I feel like going out tonight?</h1>
-            <button className="value">{answer}</button>
+            <button className="value">{isGoingOut ? "Yes" : "No"}</button>
         </main>
     )
 }
