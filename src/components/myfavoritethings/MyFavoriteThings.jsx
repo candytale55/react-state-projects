@@ -1,4 +1,4 @@
-
+import { useState } from 'react'
 import './assets/styles.css'
 
 /**
@@ -11,10 +11,12 @@ import './assets/styles.css'
 
 export default function MyFavoriteThings() {
 
-    const myFavoriteThings = []
+    const [myFavoriteThings, setMyFavoriteThings] = useState([])
+
     const allFavoriteThings = ["💦🌹", "😺", "💡🫖", "🔥🧤", "🟤🎁",
         "🐴", "🍎🥧", "🚪🔔", "🛷🔔", "🥩🍝"]
     const thingsElements = myFavoriteThings.map(thing => <p key={thing}>{thing}</p>)
+
 
     function addFavoriteThing() {
         // We'll work on this next, nothing to do here yet.
