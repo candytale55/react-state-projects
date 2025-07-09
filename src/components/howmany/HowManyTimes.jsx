@@ -9,12 +9,13 @@ import { useState } from 'react'
 
 export default function HowManyTimes() {
     
+  let [count, setCount] = useState(10);
     return (
       <main className="container">
         <h1>How many times will Bob say "state" in this section?</h1>
         <div className="counter">
           <button className="minus" aria-label="Decrease count">–</button>
-          <h2 className="count">0</h2>
+          <h2 className="count">{count+1}</h2>
           <button className="plus" aria-label="Increase count">+</button>
         </div>
       </main>
