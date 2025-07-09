@@ -3,9 +3,7 @@ import { useState } from 'react'
 
 /**
  * Challenge: 
- * Add functionality to the minus button
  * 
- * Don't use ever count++ or ++count because these modify the value directly - Big NO NO in React
  */
 
 
@@ -23,10 +21,21 @@ export default function HowManyTimes() {
    * the temporary version oldValue 
   */
 
-  function add() {
+  function add_2() {
     setCount(function (oldValue) {
       console.log("add")
       return oldValue + 1;
+    })
+  }
+
+  /**
+   * Use the common convention of prev (previous value) + state name Count. 
+  */
+
+  function add() {
+    setCount(function (prevCount) {
+      console.log("add")
+      return prevCount + 1;
     })
   }
 
