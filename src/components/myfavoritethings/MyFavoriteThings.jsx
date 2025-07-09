@@ -1,10 +1,9 @@
 import { useState } from 'react'
 import './assets/styles.css'
+import { all } from 'mathjs'
 
 /**
- * Challenge: you do it!
- * Every time "Add item" is clicked, it should add another string
- * "Test" to the list on the page
+ * Add items from allFavoriteThings to myFavoriteThings array
  */
 
 export default function MyFavoriteThings() {
@@ -17,7 +16,10 @@ export default function MyFavoriteThings() {
 
 
     function addFavoriteThing() {
-        setMyFavoriteThings(prevFavs => [...prevFavs, "Test"])
+        setMyFavoriteThings(prevFavs => [
+            ...prevFavs,
+            allFavoriteThings[prevFavs.length]    
+        ])
     }
 
     return (
