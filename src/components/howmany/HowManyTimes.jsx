@@ -3,15 +3,20 @@ import { useState } from 'react'
 
 /**
  * Challenge: 
- * See if you can think of a way to add 1 to the count
- * every time the + button is clicked
+ * Add functionality to the minus button
  */
+// Don't use ever count++ or ++count because these modify the value directly - Big NO NO in React
 
 export default function HowManyTimes() {
 
   function add() {
-    console.log("add");
-    setCount( count + 1 )  // Don't use ever count++ or ++count because these modify the value directly - Big NONO in React
+    console.log("add")
+    setCount( count + 1 )  
+  }
+
+  function subtract() {
+    console.log("subtract")
+    setCount( count - 1 )
   }
 
   let [count, setCount] = useState(0);
@@ -19,7 +24,11 @@ export default function HowManyTimes() {
       <main className="container">
         <h1>How many times will Bob say "state" in this section?</h1>
         <div className="counter">
-          <button className="minus" aria-label="Decrease count">–</button>
+          <button
+            className="minus"
+            aria-label="Decrease count"
+            onClick={subtract}
+          >–</button>
           <h2 className="count">{count}</h2>
           <button
             className="plus"
