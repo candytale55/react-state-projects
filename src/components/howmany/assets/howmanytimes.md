@@ -1,6 +1,7 @@
 # NOTES about function syntax: 
 
 
+
    Note: if you ever need the old value of state
    to help you determine the new value of state,
    you should pass a callback function to your
@@ -10,6 +11,7 @@
    you can then use to determine your new 
    value of state.
 
+    For more info: https://scrimba.com/learn-react-c0e/~02m5
 
  **Initial function**
 
@@ -51,4 +53,8 @@
         setCount( prevCount => prevCount + 1);
     }
 
+
+
+
+## Quiz
 

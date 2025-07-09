@@ -1,20 +1,20 @@
 import './assets/styles.css'
 import { useState } from 'react'
 
-
+// Challenge: update `substract` to use a callback function
 
 export default function HowManyTimes() {
   
   function add() {
     console.log("add")
-    setCount( prevCount => prevCount + 1);
+    setCount( prevCount => prevCount + 1)
   }
 
 
 
   function subtract() {
     console.log("subtract")
-    setCount( count - 1 )
+    setCount(prevCount => prevCount - 1)
   }
 
   let [count, setCount] = useState(0);
