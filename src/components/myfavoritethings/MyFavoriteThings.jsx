@@ -2,12 +2,10 @@ import { useState } from 'react'
 import './assets/styles.css'
 
 /**
-   * Challenge: Convert the code below to use an array
-   * held in state instead of a local variable. Initialize 
-   * the state array as an empty array
-   * 
-   * Don't worry about fixing `addFavoriteThing` quite yet.
-   */
+ * Challenge: you do it!
+ * Every time "Add item" is clicked, it should add another string
+ * "Test" to the list on the page
+ */
 
 export default function MyFavoriteThings() {
 
@@ -19,13 +17,15 @@ export default function MyFavoriteThings() {
 
 
     function addFavoriteThing() {
-        // We'll work on this next, nothing to do here yet.
+        setMyFavoriteThings(prevFavs => [...prevFavs, "Test"])
     }
 
     return (
         <main>
             <h1>I am MyFavoriteThings</h1>
-            <button onClick={addFavoriteThing}>Add item</button>
+            <button
+                onClick={addFavoriteThing}
+            >Add item</button>
             <section aria-live="polite">
                 {thingsElements}
             </section>
