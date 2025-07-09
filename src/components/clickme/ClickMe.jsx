@@ -21,6 +21,7 @@ export default function ClickMe() {
 
   return (
     <main className="container">
+      <h2>I am ClickMe</h2>      
       <img
         src={placeholderPhoto}
         alt="Placeholder image from Picsum"
