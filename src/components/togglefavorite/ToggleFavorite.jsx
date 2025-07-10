@@ -11,16 +11,19 @@ export default function ToggleFavorite() {
         lastName: "Doe",
         phone: "+1 (212) 555-1212",
         email: "itsmyrealname@example.com",
-        isFavorite: false
+        isFavorite: true
     })
 
- 
-
     /**
-     * Challenge: Fill in the values in the markup
-     * using the properties of our state object above
-     * (Ignore `isFavorite` for now)
+     * Challenge: Use a ternary to determine which star image variable
+     * should be used based on the `contact.isFavorite` property. Test 
+     * your results by manually changing the isFavorite value in state.
+     * 
+     * `true` => starFilled
+     * `false` => starEmpty
      */
+
+    let starIcon =  contact.isFavorite ? starFilled : starEmpty;
 
     function toggleFavorite() {
         console.log("Toggle Favorite")
@@ -41,7 +44,7 @@ export default function ToggleFavorite() {
                         className="favorite-button"
                     >
                         <img
-                            src={starEmpty} 
+                            src={starIcon} 
                             alt="empty star icon"
                             className="favorite"
                         />
