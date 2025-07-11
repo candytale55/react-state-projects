@@ -5,6 +5,9 @@ import HowManyTimes from './components/howmany/HowManyTimes'
 import IsGoingOut from './components/isgoingout/IsGoingOut'
 import MyFavoriteThings from './components/myfavoritethings/MyFavoriteThings'
 import ToggleFavorite from './components/togglefavorite/ToggleFavorite'
+import SignUpForm from './components/signupform/SignUpForm'
+import RegForm from './components/regform/RegForm'
+
 
 
 
@@ -12,7 +15,9 @@ function App() {
   
   return (
     <main className="container">
-      <ToggleFavorite />
+      <RegForm />
+      {/*<SignUpForm />*/}
+      {/*<ToggleFavorite />*/}
       {/*<MyFavoriteThings />*/}
       {/*<IsGoingOut />*/}
       {/*<HowManyTimes />*/}
