@@ -1,6 +1,7 @@
 import React from 'react';
 import './assets/styles.css'
 
+// Check https://scrimba.com/learn-react-c0e/~05xv to refresh.
 
 export default function SignUpForm() {
 
@@ -12,13 +13,15 @@ export default function SignUpForm() {
     function signUp(formData) {
         const email = formData.get("email")
         console.log(email)
+        const password = formData.get("password")
+        console.log(password)
     }
 
 
     return (
         <section>
             <h1>Signup form</h1>
-            <form>
+            <form action={signUp}>
                 <label htmlFor="email">Email: </label>
                 <input id="email" type="email" name="email" placeholder="joe@schmoe.com" />
                 <br />
