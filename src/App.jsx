@@ -15,8 +15,8 @@ function App() {
   
   return (
     <main className="container">
-      <RegForm />
-      {/*<SignUpForm />*/}
+      <SignUpForm />
+      {/*<RegForm />*/}
       {/*<ToggleFavorite />*/}
       {/*<MyFavoriteThings />*/}
       {/*<IsGoingOut />*/}
