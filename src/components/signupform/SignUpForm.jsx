@@ -23,11 +23,14 @@ export default function SignUpForm() {
             <h1>Signup form</h1>
             <form action={signUp}>
                 <label htmlFor="email">Email: </label>
-                <input id="email" type="email" name="email" placeholder="joe@schmoe.com" />
+                <input id="email" type="email" name="email" defaultValue="your@email.com" />
                 <br />
                 <label htmlFor="password">Password: </label>
                 <input id="password" type="password" name="password" />
                 <br />
+
+                <label htmlFor="description">Description: </label>
+                <textarea name="description" id="description"></textarea>
                 <button>Submit</button>
 
             </form>
