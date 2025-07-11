@@ -9,7 +9,7 @@ export default function RegForm() {
     return (
         <section>
             <h1>Registration Form</h1>
-            <form action="/api/my-server-code.php" method="POST" id="my-form">
+            <form method="POST" id="my-form">
                 <label htmlFor="first-name">First Name: </label>
                 <input type="text" id="first-name" name="firstName" className="input" />
                 <br />
