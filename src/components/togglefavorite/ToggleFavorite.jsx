@@ -14,19 +14,17 @@ export default function ToggleFavorite() {
         isFavorite: true
     })
 
-    /**
-     * Challenge: Use a ternary to determine which star image variable
-     * should be used based on the `contact.isFavorite` property. Test 
-     * your results by manually changing the isFavorite value in state.
-     * 
-     * `true` => starFilled
-     * `false` => starEmpty
-     */
+
 
     let starIcon =  contact.isFavorite ? starFilled : starEmpty;
 
     function toggleFavorite() {
         console.log("Toggle Favorite")
+        setContact(prevContact => (
+            {
+                ...prevContact,
+                isFavorite: !prevContact.isFavorite
+            }))
     }
 
     return (
@@ -40,12 +38,13 @@ export default function ToggleFavorite() {
                 <div className="info">
                     <button
                         onClick={toggleFavorite}
-                        aria-pressed={false}
+                        aria-pressed={contact.isFavorite}
+                        aria-label={contact.isFavorite ? "Remove from favorites" : "Add to favorites"}
                         className="favorite-button"
                     >
                         <img
                             src={starIcon} 
-                            alt="empty star icon"
+                            alt={contact.isFavorite ? "filled star icon" : "empty star icon" }
                             className="favorite"
                         />
                     </button>
@@ -58,5 +57,5 @@ export default function ToggleFavorite() {
 
             </article>
         </main>
-    )
+    ) 
 }
