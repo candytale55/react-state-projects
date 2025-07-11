@@ -4,6 +4,7 @@ import Yes from './components/yes/Yes'
 import HowManyTimes from './components/howmany/HowManyTimes'
 import IsGoingOut from './components/isgoingout/IsGoingOut'
 import MyFavoriteThings from './components/myfavoritethings/MyFavoriteThings'
+import ToggleFavorite from './components/togglefavorite/ToggleFavorite'
 
 
 
@@ -11,7 +12,8 @@ function App() {
   
   return (
     <main className="container">
-      <MyFavoriteThings />
+      <ToggleFavorite />
+      {/*<MyFavoriteThings />*/}
       {/*<IsGoingOut />*/}
       {/*<HowManyTimes />*/}
       {/*<Yes />*/}
