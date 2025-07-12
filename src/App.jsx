@@ -8,9 +8,12 @@ import ToggleFavorite from './components/togglefavorite/ToggleFavorite'
 import SignUpForm from './components/signupform/SignUpForm'
 import RegForm from './components/regform/RegForm' 
 import UnreadMessages from "./components/unreadmessages/UnreadMessages"
-import Jokes from './components/jokes/Jokes'*/
+import Jokes from './components/jokes/Jokes'
+import WelcomeMessage from "./components/welcomemessage/WelcomeMessage"*/
 
-import WelcomeMessage from "./components/welcomemessage/WelcomeMessage"
+import SoundPads from "./components/soundpads/SoundPads"
+
+
 
 
 
@@ -19,8 +22,9 @@ function App() {
   
   return (
     <main className="container">
-      <WelcomeMessage />
+      <SoundPads />
 
+      {/*<SoundPads />*/}
       {/*<WelcomeMessage />*/}
       {/*<UnreadMessages />*/}
       {/*<Jokes />*/}
