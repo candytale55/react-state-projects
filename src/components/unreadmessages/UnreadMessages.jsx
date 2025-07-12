@@ -6,15 +6,22 @@ export default function UnreadMessages() {
 
     /**
      * Challenge:
-     * If there are 0 unread messages, display a paragraph that says "You
-     * have no unread messages". (So, the logic will be the opposite of
-     * what we have for the h1)
+     * - If there are no unread messages, display "You're all caught up!"
+     * - If there's exactly 1 unread message, it should read "You have 
+     *   1 unread message" (singular)
+     * - If there are > 1 unread messages, display "You have <n> unread
+     *   messages" (plural)
      */
 
     return (
         <div className="container">
-            {unreadMessages.length > 0 && <h1>You have {unreadMessages.length} unread messages!</h1>}
-            {unreadMessages.length === 0 && <p>You have no unread messages!</p>}
+           
+             {unreadMessages.length > 1 ? <h1>You have {unreadMessages.length} unread messages!</h1> :
+                unreadMessages.length === 1 ? <h1>You have 1 unread message</h1> :
+                    <h1>You're all caught up!</h1>}
+            
+
+
         </div>
     )
 }
