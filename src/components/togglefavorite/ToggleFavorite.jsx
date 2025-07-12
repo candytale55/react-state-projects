@@ -49,6 +49,7 @@ export default function ToggleFavorite() {
                 
                         <Star
                             isFilled={contact.isFavorite}
+                            handleClick={toggleFavorite}
                         />
                     <h2 className="name">
                         {contact.firstName} {contact.lastName}
