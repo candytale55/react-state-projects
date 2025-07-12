@@ -2,19 +2,22 @@ import React from "react"
 import './assets/styles.css'
 
 export default function UnreadMessages() {
-    const [unreadMessages, setUnreadMessages] = React.useState(["a", "b"])
+    const [messages, setMessages] = React.useState(["a", "b"])
 
-    /**
-     * Challenge:
-     * If there are 0 unread messages, display a paragraph that says "You
-     * have no unread messages". (So, the logic will be the opposite of
-     * what we have for the h1)
-     */
+    function determineText() {
+        if (messages.length === 0) {
+            return "You're all caught up!"
+        } else if (messages.length === 1) {
+            return "You have 1 unread message"
+        } else {
+            return `You have ${messages.length} unread messages`
+        }
+    }
+
 
     return (
         <div className="container">
-            {unreadMessages.length > 0 && <h1>You have {unreadMessages.length} unread messages!</h1>}
-            {unreadMessages.length === 0 && <p>You have no unread messages!</p>}
+            <h1>{determineText()}</h1>
         </div>
     )
 }
