@@ -1,4 +1,4 @@
-import React from 'react';
+
 import './assets/styles.css'
 
 // Check https://scrimba.com/learn-react-c0e/~05xv to refresh.
@@ -6,23 +6,21 @@ import './assets/styles.css'
 export default function SignUpForm() {
 
   /**
-   * Challenge: grab the employment status from the form and log it
-   * to the console. (Remember to select one of the radios before submitting)
+   * Challenge: see if you can remember how to grab an array of checked
+   * items from the dietaryRestrictions checkboxes.
    * 
-   * Note: This won't work the way you might expect quite yet!
+   * Best ot use something more robust like Zod Library
    */
 
     function signUp(formData) {
-        const email = formData.get("email")
-        console.log(email)
-        const password = formData.get("password")
-        console.log(password)
-        const employmentStatus = formData.get("employmentStatus")
-        console.log(employmentStatus)
-        const dietaryRestrictions = formData.getAll("dietaryRestrictions")
-        console.log(dietaryRestrictions)
-        const favColor = formData.get("favColor")
-        console.log(favColor)
+      const data = Object.fromEntries(formData)
+      const dietaryRestrictions = formData.getAll("dietaryRestrictions")
+      const allData = {
+        ...data,
+        dietaryRestrictions
+      }
+      console.log(allData)
+      // console.log(data, dietaryData)
     }
 
 
