@@ -9,15 +9,16 @@ import SignUpForm from './components/signupform/SignUpForm'
 import RegForm from './components/regform/RegForm' 
 import UnreadMessages from "./components/unreadmessages/UnreadMessages"
 import Jokes from './components/jokes/Jokes'*/
+import ToggleFavorite from './components/togglefavorite/ToggleFavorite'
 
-import HowManyTimes from './components/howmany/HowManyTimes'
 
 
 function App() {
   
   return (
     <main className="container">
-      <HowManyTimes />
+      <ToggleFavorite />
+
       {/*<UnreadMessages />*/}
       {/*<Jokes />*/}
       {/*<SignUpForm />*/}
