@@ -20,7 +20,7 @@ export default function HowManyTimes() {
   let [count, setCount] = useState(0);
     return (
       <main className="container">
-        <h1>How many times will Bob say "state" in this section?</h1>
+        
         <div className="counter">
           <button
             className="minus"
