@@ -19,6 +19,8 @@ export default function SignUpForm() {
         console.log(password)
         const employmentStatus = formData.get("employmentStatus")
         console.log(employmentStatus)
+        const dietaryRestrictions = formData.getAll("dietaryRestrictions")
+        console.log(dietaryRestrictions)
     }
 
 
@@ -51,7 +53,23 @@ export default function SignUpForm() {
                       <input id="radioButton3" type="radio" name="employmentStatus" value="part-time" />
                       Part-time
                   </label>
-                </fieldset>
+          </fieldset>
+          
+          <fieldset>
+            <legend>Dietary Restrictions</legend>
+            <label htmlFor="radioButton">
+              <input id="checkbox1" type="checkbox" name="dietaryRestriction" value="kosher" />
+              Kosher
+            </label>
+            <label htmlFor="radioButton">
+              <input id="checkbox2" type="checkbox" name="dietaryRestriction" value="vegan" />
+              Vegan
+            </label>
+            <label htmlFor="radioButton">
+              <input id="checkbox3" type="checkbox" name="dietaryRestriction" value="gluten-free" />
+              Gluten-free
+            </label>
+          </fieldset>
                 
                 <br />
                 <button>Submit</button>
