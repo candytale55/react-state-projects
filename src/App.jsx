@@ -9,7 +9,9 @@ import SignUpForm from './components/signupform/SignUpForm'
 import RegForm from './components/regform/RegForm' 
 import UnreadMessages from "./components/unreadmessages/UnreadMessages"
 import Jokes from './components/jokes/Jokes'*/
-import ToggleFavorite from './components/togglefavorite/ToggleFavorite'
+
+import WelcomeMessage from "./components/welcomemessage/WelcomeMessage"
+
 
 
 
@@ -17,8 +19,9 @@ function App() {
   
   return (
     <main className="container">
-      <ToggleFavorite />
+      <WelcomeMessage />
 
+      {/*<WelcomeMessage />*/}
       {/*<UnreadMessages />*/}
       {/*<Jokes />*/}
       {/*<SignUpForm />*/}
