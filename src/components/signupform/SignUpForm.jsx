@@ -21,6 +21,8 @@ export default function SignUpForm() {
         console.log(employmentStatus)
         const dietaryRestrictions = formData.getAll("dietaryRestrictions")
         console.log(dietaryRestrictions)
+        const favColor = formData.get("favColor")
+        console.log(favColor)
     }
 
 
@@ -57,20 +59,32 @@ export default function SignUpForm() {
           
           <fieldset>
             <legend>Dietary Restrictions</legend>
-            <label htmlFor="radioButton">
-              <input id="checkbox1" type="checkbox" name="dietaryRestriction" value="kosher" />
+            <label htmlFor="checkbox1">
+              <input id="checkbox1" type="checkbox" name="dietaryRestrictions" value="kosher" />
               Kosher
             </label>
-            <label htmlFor="radioButton">
-              <input id="checkbox2" type="checkbox" name="dietaryRestriction" value="vegan" />
+            <label htmlFor="checkbox2">
+              <input id="checkbox2" type="checkbox" name="dietaryRestrictions" value="vegan" />
               Vegan
             </label>
-            <label htmlFor="radioButton">
-              <input id="checkbox3" type="checkbox" name="dietaryRestriction" value="gluten-free" />
+            <label htmlFor="checkbox3">
+              <input id="checkbox3" type="checkbox" name="dietaryRestrictions" value="gluten-free" />
               Gluten-free
             </label>
           </fieldset>
-                
+
+          <label htmlFor="favColor"></label>
+          <select name="favColor" id="favColor" defaultValue="" required>
+            <option value="" disabled>-- Choose a color --</option>
+            <option value="red">Red</option>
+            <option value="orange">Orange</option>
+            <option value="yellow">Yellow</option>
+            <option value="green">Green</option>
+            <option value="blue">Blue</option>
+            <option value="indigo">Indigo</option>
+            <option value="violet">Violet</option>
+          </select>
+
                 <br />
                 <button>Submit</button>
 
