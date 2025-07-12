@@ -4,7 +4,7 @@ import Body from "./Body"
 import './assets/styles.css'
 
 export default function WelcomeMessage() {
-    const [userName, setUserName] = React.useState("Joe")
+    const [userName, setUserName] = React.useState("Mirna")
 
     return (
         <main className="card">
