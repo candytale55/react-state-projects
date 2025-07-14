@@ -5,7 +5,7 @@ export default function Pad(props) {
     return (
         <button
             style={{ backgroundColor: props.padColor }}
-            className={ props.isOn ? "on" : null }
+            className={ props.isOn ? "on" : undefined }
         >
             
         </button>
