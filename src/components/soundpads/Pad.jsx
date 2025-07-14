@@ -23,12 +23,12 @@ export default function Pad(props) {
 
     const [on, setOn] = useState(props.isOn)
     
-    const toggle = (prevOn => !prevOn)
+    function togglePad () { setOn(prevOn => !prevOn)}
     
     
     return (
         <button
-            onClick={toggle}
+            onClick={togglePad}
             style={{ backgroundColor: props.padColor }}
             className={ on ? "on" : undefined }
         >
