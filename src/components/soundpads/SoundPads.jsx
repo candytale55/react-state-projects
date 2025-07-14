@@ -7,7 +7,14 @@ import "./assets/styles.css"
 
 export default function SoundPads() {
   const [padData, setPadData] = useState(pads) // Step 1: Initialize state with the pads array
-  
+
+  function turnAllPadsOff() {
+    console.log("Turning off")
+    setPads(prevPads => prevPads.map(pad => ({
+      ...pad,
+      on: false
+    })))
+  }
 
   const padElements = padData.map(pad => 
     <Pad 
@@ -23,7 +30,8 @@ export default function SoundPads() {
         <main>
             <div className="pad-container">
               {padElements}                
-            </div>
+        </div>
+        <button className="all-off" onClick={turnAllPadsOff}>Turn All Off</button>
         </main>
     )
 }

@@ -7,9 +7,12 @@ body {
 }
 
 main {
-    display: flex;
+    /* display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center; 
+    
+    Commented just to be able to play with toggleAll Off Button
+    */
 }
 
 .pad-container {
@@ -30,4 +33,15 @@ button {
 
 button.on {
     opacity: 1;
+}
+
+button.all-off {
+    
+    all: unset;
+    color: white;
+    background-color: #B91C1C;
+    padding: 10px 20px;
+    margin-top: 20px;
+    border-radius: 5px;
+    cursor: pointer;
 }

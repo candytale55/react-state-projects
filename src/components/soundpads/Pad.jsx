@@ -2,20 +2,16 @@ import { useState } from "react"
 
 
 
-/**
- * Challenge: Create state controlling whether
- * this pad is "on" or "off". Use the incoming
- * `props.on` to determine the initial state.
- * 
- * Create an event listener so when the pad is clicked,
- * it toggles from "on" to "off".
- * 
- * Goal: clicking each pad should toggle it on and off.
- * 
- * Ref: https://youtu.be/x4rFhThSX04?si=oQb2AeQEHG2OG-pj&t=31440
- * https://scrimba.com/learn-react-c0e/~04md/s0lmhjavsm/head
- * 
- */
+    /**
+     * Add a toggleAllOff button and function to prove that derived state 
+     * is not such a good idea. 
+     * The Pad components won't care if the button in SoundPads is pressed. 
+     * 
+     * 
+     * Ref: 
+     * https://legacy.reactjs.org/blog/2018/06/07/you-probably-dont-need-derived-state.html
+     * 
+     */
 
 
 
