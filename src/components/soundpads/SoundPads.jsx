@@ -1,8 +1,16 @@
-
+import { useState } from "react"
 import pads from "./assets/pads"
 import "./assets/styles.css"
 
 export default function SoundPads() {
+    const [padData, setPadData] = useState(pads) // Step 1: Initialize state with the pads array
+
+  const padElements = padData.map(pad => 
+      <button
+        key={pad.id}
+      ></button>
+    )
+
     /**
      * Challenge part 1:
      * 1. Initialize state with the default value of the
@@ -15,8 +23,8 @@ export default function SoundPads() {
     return (
         <main>
             <div className="pad-container">
-                I am SoundPads
-                {/* <button>s go here */}
+
+              {padElements}                
             </div>
         </main>
     )
