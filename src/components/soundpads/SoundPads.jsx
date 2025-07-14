@@ -31,7 +31,7 @@ export default function SoundPads() {
             <div className="pad-container">
               {padElements}                
         </div>
-        <button className="all-off" onClick={turnAllPadsOff}>Turn All Off</button>
+        {/*<button className="all-off" onClick={turnAllPadsOff}>Turn All Off</button>*/}
         </main>
     )
 }
