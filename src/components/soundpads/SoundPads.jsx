@@ -8,18 +8,11 @@ export default function SoundPads() {
   const padElements = padData.map(pad => 
       <button
         key={pad.id}
+        style={{ backgroundColor: pad.on ? pad.color : "white" }}
       ></button>
     )
 
-    /**
-     * Challenge part 1:
-     * 1. Initialize state with the default value of the
-     *    array pulled in from pads.js
-     * 2. Map over that state array and display each one
-     *    as a <button> (CSS is already written for you)
-     *    (Don't worry about using the "on" or "color" 
-     *    properties yet)
-     */
+
     return (
         <main>
             <div className="pad-container">

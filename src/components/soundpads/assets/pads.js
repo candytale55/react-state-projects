@@ -32,7 +32,7 @@ export default [
     {
         id: 7,
         color: "#A57FE9",
-        on: false
+        on: true
     },
     {
         id: 8,
