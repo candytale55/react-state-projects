@@ -23,7 +23,7 @@ export default function SoundPads() {
   const padElements = padData.map(pad => 
     <Pad 
       key={pad.id}
-      padColor={pad.on ?pad.color: "white" }    
+      padColor={pad.on ?pad.color: "white" }     
     />
 
     )
