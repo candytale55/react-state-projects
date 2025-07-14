@@ -17,20 +17,21 @@ import "./assets/styles.css"
 
 
 export default function SoundPads() {
-    const [padData, setPadData] = useState(pads) // Step 1: Initialize state with the pads array
+  const [padData, setPadData] = useState(pads) // Step 1: Initialize state with the pads array
+  
 
   const padElements = padData.map(pad => 
-      <button
-        key={pad.id}
-        style={{ backgroundColor: pad.on ? pad.color : "white" }}
-      ></button>
+    <Pad 
+      key={pad.id}
+      padColor={pad.on ?pad.color: "white" }    
+    />
+
     )
 
 
     return (
         <main>
             <div className="pad-container">
-              <Pad />
               {padElements}                
             </div>
         </main>
