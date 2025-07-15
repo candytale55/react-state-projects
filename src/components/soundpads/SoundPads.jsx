@@ -3,35 +3,39 @@ import Pad from "./Pad"
 import pads from "./assets/pads"
 import "./assets/styles.css"
 
+/**
+ * Challenge: Create a toggle() function that logs
+ * "clicked!" to the console
+ * 
+ * Pass that function down to each of the Pad components
+ * and set it up so when they get clicked, the function runs
+ 
+   * Ref: https://scrimba.com/learn-react-c0e/~06ud
+   * https://youtu.be/x4rFhThSX04?si=PPxPYD8gVZBiuYD8&t=32039
+   */
+
 
 
 export default function SoundPads() {
   const [padData, setPadData] = useState(pads) // Step 1: Initialize state with the pads array
 
-  function togglePad() { console.log("clicked") }
-
-  /**
-   * Challenge: Create a toggle() function that logs
-   * "clicked!" to the console
-   * 
-   * Pass that function down to each of the Pad components
-   * and set it up so when they get clicked, the function runs
-  
-     * Ref: 
-     * https://legacy.reactjs.org/blog/2018/06/07/you-probably-dont-need-derived-state.html
-     * https://scrimba.com/learn-react-c0e/~03bb
-     * https://youtu.be/x4rFhThSX04?si=XJXCieNNE1oDYwCJ&t=31948
-     * 
-     */
-
+  function togglePad(id) {
+    // console.log("toggle function")
+ 
+    // map over the pads array, and if the current item has
+    // the same id as the one passed to this function, then
+    // flip its `on` value.
+  }
 
 
   const padElements = padData.map(pad => 
     <Pad 
-      handleClick={togglePad}
-      key={pad.id}
+      key={pad.id} 
+      id= {pad.id} 
       padColor={pad.color}
       isOn={pad.on}
+      togglePad={togglePad}
+
     />
 
     )
