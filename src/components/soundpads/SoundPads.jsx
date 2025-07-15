@@ -1,6 +1,6 @@
 import { useState } from "react"
 import Pad from "./Pad"
-import pads from "./assets/pads"
+import padsData from "./assets/pads"
 import "./assets/styles.css"
 
 /**
@@ -19,20 +19,13 @@ import "./assets/styles.css"
 
 
 export default function SoundPads() {
-  const [pads, setPads] = useState(pads) // Step 1: Initialize state with the pads array
+  
+  const [pads, setPads] = useState(padsData) 
 
   function togglePad(id) {
-    console.log(id)
-    setPads(prevPad => {
-      return prevPad.map((id) => {
-        if (prevPad.id === id) {
-          return {...prevPad, on: !pad.on}
-        } else {
-          return prevPad
-        }
-      })
-    })
-    console.log(pads.color)
+    setPads(prevPads => prevPads.map(item => {
+      return item.id === id ? { ...item, on: !item.on} : item 
+    }))
   }
 
 
@@ -43,17 +36,14 @@ export default function SoundPads() {
       padColor={pad.color}
       isOn={pad.on}
       togglePad={togglePad}
-
-    />
-
-    )
+    />)
 
 
     return (
         <main>
-            <div className="pad-container">
-              {padElements}                
-        </div>
+          <div className="pad-container">
+            {padElements}                
+          </div>
         </main>
     )
 }
