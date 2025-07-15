@@ -20,7 +20,7 @@ export default function SoundPads() {
   const [padData, setPadData] = useState(pads) // Step 1: Initialize state with the pads array
 
   function togglePad(id) {
-    // console.log("toggle function")
+    console.log(id)
  
     // map over the pads array, and if the current item has
     // the same id as the one passed to this function, then
