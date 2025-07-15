@@ -1,9 +1,8 @@
-import { useState } from "react"
 
 
 export default function Pad(props) {
     // console.log(props)
-    const [on, setOn] = useState(props.isOn)
+
     
 
     
@@ -11,9 +10,8 @@ export default function Pad(props) {
     return (
         <button
             style={{ backgroundColor: props.padColor }}
-            className={on ? "on" : undefined}
+            className={props.on ? "on" : undefined}
             onClick={()=>props.togglePad(props.id)}
-
         >
             
         </button>
