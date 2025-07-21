@@ -9,9 +9,13 @@ import SignUpForm from './components/signupform/SignUpForm'
 import RegForm from './components/regform/RegForm' 
 import UnreadMessages from "./components/unreadmessages/UnreadMessages"
 import Jokes from './components/jokes/Jokes'
-import WelcomeMessage from "./components/welcomemessage/WelcomeMessage"*/
-
+import WelcomeMessage from "./components/welcomemessage/WelcomeMessage"
 import SoundPads from "./components/soundpads/SoundPads"
+*/
+
+import CounterSide from "./components/countersideeffect/CounterSide"
+
+
 
 
 
@@ -22,8 +26,9 @@ function App() {
   
   return (
     <main className="container">
-      <SoundPads />
+      <CounterSide />
 
+      {/*<CounterSide />*/}
       {/*<SoundPads />*/}
       {/*<WelcomeMessage />*/}
       {/*<UnreadMessages />*/}
