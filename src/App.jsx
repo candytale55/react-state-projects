@@ -11,14 +11,10 @@ import UnreadMessages from "./components/unreadmessages/UnreadMessages"
 import Jokes from './components/jokes/Jokes'
 import WelcomeMessage from "./components/welcomemessage/WelcomeMessage"
 import SoundPads from "./components/soundpads/SoundPads"
+import CounterSide from "./components/countersideeffect/CounterSide"
 */
 
-import CounterSide from "./components/countersideeffect/CounterSide"
-
-
-
-
-
+import ToggleWindowTracker from "./components/togglewindowtracker/ToggleWindowTracker"
 
 
 
@@ -26,8 +22,9 @@ function App() {
   
   return (
     <main className="container">
-      <CounterSide />
+      <ToggleWindowTracker />
 
+      {/*<ToggleWindowTracker />*/}
       {/*<CounterSide />*/}
       {/*<SoundPads />*/}
       {/*<WelcomeMessage />*/}
